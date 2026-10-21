@@ -1,0 +1,22 @@
+# Зависимости и сборка
+node_modules/
+dist/
+.vite/
+coverage/
+*.tsbuildinfo
+
+# Локальные инструменты и окружение (portable Node, настройки редактора/Claude)
+.tools/
+.claude/
+.env
+.env.*
+!.env.example
+
+# Материалы заказчика (видео, фич-лист, скриншоты) — не публикуем
+docs/
+
+# Служебные файлы
+*.log
+.DS_Store
+Thumbs.db
+Новый текстовый документ.txt
