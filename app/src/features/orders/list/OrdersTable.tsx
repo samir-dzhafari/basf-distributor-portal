@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { clickableRow } from '@/shared/lib/tableRow'
-import { Grid, Table, type TableColumnsType } from 'antd'
+import { Grid, Pagination, Table, type TableColumnsType } from 'antd'
 import { ru } from '@/shared/i18n/ru'
 import { formatDateTime, formatMoney } from '@/shared/lib/format'
 import { StatusTag } from '@/shared/ui/StatusTag'
@@ -134,22 +134,18 @@ export function OrdersTable({
             </button>
           ))}
         </div>
-        <Table
-          size="small"
-          rowKey="id"
-          columns={[]}
-          dataSource={[]}
-          showHeader={false}
-          locale={{ emptyText: ' ' }}
-          pagination={{
-            ...pagination,
-            align: 'center',
-            simple: true,
-            showSizeChanger: false,
-            hideOnSinglePage: total <= query.pageSize,
-          }}
-          onChange={(p) => onQuery({ page: p.current ?? 1 })}
-        />
+        {total > query.pageSize && (
+          <Pagination
+            simple
+            align="center"
+            current={query.page}
+            pageSize={query.pageSize}
+            total={total}
+            showSizeChanger={false}
+            style={{ marginTop: 16 }}
+            onChange={(page) => onQuery({ page })}
+          />
+        )}
       </>
     )
   }
