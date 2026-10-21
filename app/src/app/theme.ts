@@ -48,6 +48,9 @@ export const theme: ThemeConfig = {
       itemSelectedColor: BRAND.primary,
       horizontalItemHoverColor: BRAND.primary,
     },
+    Switch: { trackHeight: 28, trackMinWidth: 52, handleSize: 22 },
+    Checkbox: { controlInteractiveSize: 22 },
+    Radio: { radioSize: 22, dotSize: 12 },
     Card: { boxShadowTertiary: 'none' },
   },
 }

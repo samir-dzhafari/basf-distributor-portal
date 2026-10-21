@@ -1121,3 +1121,109 @@ form.ant-form > .ant-row + .ant-btn {
   align-items: center;
   gap: 12px;
 }
+
+/* ---------- Крупные цели для клика (мелкие иконки трудно нажимать) ---------- */
+.ant-select-clear,
+.ant-picker-clear,
+.ant-input-clear-icon,
+.ant-input-number-clear-icon {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 18px !important;
+  border-radius: 50%;
+  color: #7c8383;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.ant-select-clear,
+.ant-picker-clear {
+  inset-inline-end: 6px;
+  margin-top: -14px;
+}
+.ant-input-clear-icon {
+  margin: 0 -4px 0 4px;
+}
+.ant-select-clear:hover,
+.ant-picker-clear:hover,
+.ant-input-clear-icon:hover {
+  background: #eceeee;
+  color: var(--brand-dark);
+}
+.ant-select-arrow {
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  font-size: 14px;
+  inset-inline-end: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ant-select-multiple .ant-select-selection-item-remove,
+.ant-tag-close-icon,
+.ant-alert-close-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  min-height: 22px;
+  font-size: 13px;
+  border-radius: 50%;
+}
+.ant-select-multiple .ant-select-selection-item-remove:hover,
+.ant-tag-close-icon:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+.ant-input-password-icon {
+  font-size: 18px;
+  padding: 8px;
+  margin: -8px;
+  cursor: pointer;
+}
+.ant-input-suffix .anticon {
+  font-size: 16px;
+}
+.ant-modal-close,
+.ant-drawer-close {
+  width: 36px;
+  height: 36px;
+}
+.ant-pagination-item,
+.ant-pagination-prev,
+.ant-pagination-next,
+.ant-pagination-simple .ant-pagination-simple-pager {
+  min-width: 36px;
+  height: 36px;
+  line-height: 34px;
+}
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  width: 36px;
+  height: 36px;
+}
+.ant-table-row-expand-icon {
+  width: 24px;
+  height: 24px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  padding-block: 14px;
+}
+.ant-select .ant-select-clear,
+.ant-picker .ant-picker-clear {
+  width: 28px !important;
+  height: 28px !important;
+  margin-top: -14px !important;
+  inset-inline-end: 6px !important;
+  background: #fff;
+}
+.ant-select .ant-select-clear:hover,
+.ant-picker .ant-picker-clear:hover {
+  background: #eceeee;
+}
+.ant-select-multiple .ant-select-selection-item-remove {
+  min-height: 22px;
+}
